@@ -15,7 +15,7 @@ case $op in
         echo $(($num1 * $num2))
         ;;
     "/")
-        if [ $num2 -eq 0 ]; then
+        if [[ $num2 -eq 0 ]]; then
             echo "Ошибка деления на 0"
         else
             echo $(($num1 / $num2))
