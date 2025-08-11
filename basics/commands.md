@@ -169,3 +169,24 @@ chmod option file
 chown [option] user[:group] file
 chgrp [option] group file
 ```
+
+## Crontab
+Расписание команд в линукс
+```
+crontab -e # открыть редактор
+crontab -l [-u user] # посмотреть распиасние юзера
+```
+### Базовый синтаксис
+```
+* * * * * command
+
+min hour day month weekday command
+```
+Пример установки времени
+```
+0 * * * *  # every hour
+*/15 * * * * # every 15 mins
+0 */2 * * * # every 2 hours
+0 18 * * 0-6 # every week Sunday-Saturday at 18:00 
+@reboot # every reboot
+```
